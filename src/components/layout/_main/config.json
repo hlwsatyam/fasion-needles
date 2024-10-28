@@ -1,0 +1,111 @@
+{
+  "menu": [
+    {
+      "title": "Home",
+      "path": "/"
+    },
+    {
+      "title": "Categories",
+      "path": "h",
+      "isDropdown": true
+    },
+   
+    {
+      "title": "Men",
+      "path": "/products?gender=men"
+    },
+    {
+      "title": "Women",
+      "path": "/products?gender=women"
+    },
+    {
+      "title": "Kids",
+      "path": "/products?gender=kids"
+    }
+  ],
+  "mobile_menu": [
+    {
+      "name": "Home",
+      "href": "/"
+    },
+    {
+      "name": "Search",
+      "href": "/search"
+    },
+    {
+      "name": "Product",
+      "href": "/products"
+    },
+    {
+      "name": "Cart",
+      "href": "/cart"
+    },
+    {
+      "name": "User",
+      "isUser": true,
+      "href": "/auth/login"
+    }
+  ],
+
+  "social": [
+    { "name": "FaceBook", "color": "#1672E6", "href": "#" },
+    { "name": "Instagram", "color": "#F40052", "href": "#" },
+    { "name": "Linkedin", "color": "#0962B7", "href": "#" },
+    { "name": "Pinterest", "color": "#B7081B", "href": "#" }
+  ],
+  "company": {
+    "company_name": "Commercehope",
+    "address": "123 Main Street Apartment 567",
+    "email": "test@example.com",
+    "phone": "555-1234-2222"
+  },
+  "footer_links": [
+    {
+      "headline": "Menu",
+      "children": [
+        
+        {
+          "name": "Categories",
+          "href": ""
+        
+        },
+        {
+          "name": "Products",
+          "href": "/products"
+        },
+        {
+          "name": "Men",
+          "href": "/products?gender=men"
+        },
+        {
+          "name": "Women",
+          "href": "/products?gender=women"
+        },
+        {
+          "name": "Kids",
+          "href": "/products?gender=kids"
+        }
+      ]
+    },
+    {
+      "headline": "Product",
+      "children": [
+        { "name": "application", "href": "#" },
+        { "name": "features", "href": "#" },
+        { "name": "Requirements", "href": "#" },
+        { "name": "Technology", "href": "#" }
+      ]
+    },
+    {
+      "headline": "Policies",
+      "children": [
+        { "name": "FAQ", "href": "faqs" },
+        { "name": "T&C", "href": "tac" },
+        { "name": "Terms Of Use", "href": "termsofuses" },
+        { "name": "Cancellation Policy", "href": "cancellationpolicy" },
+        { "name": "Returns", "href": "returns" },
+        { "name": "Privacy Policy", "href": "privacypolicy" }
+      ]
+    }
+  ]
+}
