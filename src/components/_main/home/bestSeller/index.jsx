@@ -17,7 +17,7 @@ export default function Featured() {
         Best Seller
       </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center" mb={5}>
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        Deal With Best Seller Products In Fasionneedles.com
       </Typography>
 
       {!isLoading && !Boolean(data?.data.length) ? (

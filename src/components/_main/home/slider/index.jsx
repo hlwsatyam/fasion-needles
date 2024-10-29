@@ -4,27 +4,23 @@ import Slider from 'react-slick';
 import { Box, CardMedia } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import f from '../../../../../public/b1.jpg'
+import g from '../../../../../public/b2.webp'
+import Image from 'next/image';
 const BannerCarousel = ({
   banners = [
+     
     {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
+      image: f,
     },
     {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
+      image: g,
     },
     {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
+      image: f,
     },
-    {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
-    },
-    {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
-    },
-    {
-      image: 'https://i.ibb.co/GJkR8d2/fn.png',
-    },
+     
+    
    
   ]
 }) => {
@@ -37,7 +33,7 @@ const BannerCarousel = ({
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: '15%',
+    centerPadding: '18%',
     appendDots: (dots) => (
       <Box sx={{ padding: "10px", position: "absolute", bottom: "10px", left: "50%", transform: "translateX(-50%)" }}>
         <ul style={{ margin: 0, display: 'flex', justifyContent: 'center', listStyleType: 'none' }}>
@@ -69,18 +65,17 @@ const BannerCarousel = ({
       <Slider {...settings}>
         {banners.map((banner, index) => (
           <div key={index}>
-            <Box sx={{ position: 'relative', height: { xs: 200, sm: 300, md: 600 } }}>
-              <CardMedia
-                component="img"
-                image={banner.image}
-                alt={`Slide ${index + 1}`}
-                sx={{
-                  borderRadius: 12,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                }}
-              />
+            <Box sx={{ position: 'relative', height: { xs: 200, sm: 300, md: 500 } }}>
+            <Image
+                  src={banner.image}
+                  alt={`Slide ${index + 1}`}
+                  layout="fill"
+                  objectFit="contain"
+                  style={{
+                   
+                    borderRadius: '12px',
+                  }}
+                />
             </Box>
           </div>
         ))}

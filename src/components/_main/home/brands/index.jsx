@@ -36,7 +36,7 @@ export default async function Brands() {
           mb: 5
         }}
       >
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        We have a wide range of brands to choose 
       </Typography>
 
       {isLoading ? (

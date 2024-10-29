@@ -19,7 +19,7 @@ export default function TopCollections() {
         Top Collections
       </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center" mb={5}>
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+         Top Collection Of Latest Products 
       </Typography>
 
       <Grid container spacing={2} justifyContent="center">

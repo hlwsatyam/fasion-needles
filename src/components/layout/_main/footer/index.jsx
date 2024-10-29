@@ -105,8 +105,7 @@ export default function Footer() {
             Newsletter
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
-            {`'`}s standard dummy text ever since the 1500s.
+            Subscribe to our newsletter and stay updated with the latest news and
           </Typography>
           <NewsLetter />
           <Stack direction="row" spacing={3} justifyContent="center">

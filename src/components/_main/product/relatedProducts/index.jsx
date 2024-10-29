@@ -27,7 +27,7 @@ export default function RelatedProducts({ ...props }) {
         Related Products
       </Typography>
       <Typography variant="body1" color="text.secondary" className="description">
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+        Get a some relatable Product 
       </Typography>
       <ProductsCarousel data={data?.data} isLoading={isLoading} />
     </RootStyled>

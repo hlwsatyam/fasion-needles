@@ -17,7 +17,7 @@ export default async function Featured({ data: products }) {
         Featured Products
       </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center" mb={5}>
-        Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+         Our Best Featured Products on Fasionneedles.com
       </Typography>
       <ProductsCarousel data={data?.data} />
     </Box>
