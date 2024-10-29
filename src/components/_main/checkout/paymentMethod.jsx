@@ -10,6 +10,8 @@ import { IoCash } from 'react-icons/io5';
 import StripeCheckoutForm from 'src/components/stripe/Form';
 
 import PropTypes from 'prop-types';
+import PaymentInfo from './paymentInfo';
+import { PaymentsRounded, ScannerSharp } from '@mui/icons-material';
 
 PaymentMethodCard.propTypes = {
   value: PropTypes.string.isRequired,
@@ -40,7 +42,7 @@ export default function PaymentMethodCard({ value, setValue, error }) {
                 </Stack>
               }
             />
-            <FormControlLabel
+            {/* <FormControlLabel
               value="stripe"
               control={<Radio />}
               label={
@@ -59,8 +61,28 @@ export default function PaymentMethodCard({ value, setValue, error }) {
                   <Typography variant="subtitle2">Stripe</Typography>
                 </Stack>
               }
-            />
+            /> */}
             <FormControlLabel
+              value="phonepe"
+              control={<Radio />}
+              label={
+                <Stack
+                  direction="row"
+                  alignItem="center"
+                  spacing={1}
+                  ml={1}
+                  sx={{
+                    svg: {
+                      color: value === 'stripe' ? 'primary.main' : 'text.primary'
+                    }
+                  }}
+                >
+                  <PaymentsRounded size={20} />
+                  <Typography variant="subtitle2">Online</Typography>
+                </Stack>
+              }
+            />
+            {/* <FormControlLabel
               value="paypal"
               control={<Radio />}
               label={
@@ -79,7 +101,8 @@ export default function PaymentMethodCard({ value, setValue, error }) {
                   <Typography variant="subtitle2">PayPal</Typography>
                 </Stack>
               }
-            />
+            /> */}
+          
           </RadioGroup>
         </Stack>
         <Collapse in={value === 'stripe'}>

@@ -34,6 +34,7 @@ import CheckoutGuestFormSkeleton from '../skeletons/checkout/checkoutForm';
 import PaymentInfoSkeleton from '../skeletons/checkout/paymentInfo';
 import PaymentMethodCardSkeleton from '../skeletons/checkout/paymentMethod';
 import CardItemSekelton from '../skeletons/checkout/cartItems';
+import { initiatePayment } from 'src/components/phonepe/phonepe';
 // dynamic components
 const CheckoutForm = dynamic(() => import('src/components/forms/checkout'), {
   loading: () => <CheckoutGuestFormSkeleton />
@@ -136,7 +137,7 @@ const CheckoutMain = () => {
     onSubmit: async (values) => {
       const items = cart.map(({ ...others }) => others);
       const totalItems = sum(items.map((item) => item.quantity));
-
+       
       const data = {
         paymentMethod: paymentMethod,
         items: items,
@@ -147,12 +148,25 @@ const CheckoutMain = () => {
       };
       if (data.paymentMethod === 'stripe') {
         onSubmit(data);
+      }
+      if (data.paymentMethod === 'phonepe') {
+        
+        let totalPrice = 0;
+        data?.items.map((item) => {
+          totalPrice += item.priceSale * item.quantity;
+        });
+
+        phonepePayment(totalPrice, data);
       } else {
         mutate(data);
       }
     }
   });
   const { errors, values, touched, handleSubmit, getFieldProps, isValid } = formik;
+
+  const phonepePayment = async (totalPrice, orderId) => {
+    await initiatePayment(totalPrice, orderId);
+  };
 
   const onSubmit = async ({ ...data }) => {
     setProcessingTo(true);
