@@ -8,8 +8,8 @@ import MenuDesktopList from 'src/components/lists/menuDesktopList';
 import MenuPopover from 'src/components/popover/popover';
 
 export default function MenuDesktop({ ...props }) {
-  const { isOpen, onClose, isLoading, data } = props;
-
+  const { isOpen, currentName, onClose, isLoading, data } = props;
+ 
   return (
     <MenuPopover
       open={isOpen}
@@ -26,9 +26,9 @@ export default function MenuDesktop({ ...props }) {
     >
       <Grid container spacing={3}>
         {data?.map((parent) => {
-          return (
+      return   (
             <Grid item lg={2} key={Math.random()}>
-             <MenuDesktopList parent={parent} isLoading={isLoading} onClose={onClose} />
+              <MenuDesktopList currentName={currentName} parent={parent} isLoading={isLoading} onClose={onClose} />
             </Grid>
           );
         })}

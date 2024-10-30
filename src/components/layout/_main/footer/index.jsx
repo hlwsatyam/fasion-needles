@@ -12,28 +12,30 @@ import NewsLetter from './newsletter';
 
 // icons
 import { IoLogoInstagram } from 'react-icons/io5';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook,   FaTwitter } from 'react-icons/fa';
 import { IoLogoYoutube } from 'react-icons/io';
+ 
+import { BiX } from 'react-icons/bi';
 
 const SOCIAL_MEDIA_LINK = [
   {
     name: 'facebook',
-    linkPath: 'https://www.facebook.com/techgater',
+    linkPath: 'https://www.facebook.com/fashionneedles2?mibextid=LQQJ5d',
     icon: <FaFacebook className="facebook" />
   },
   {
     name: 'instagram',
-    linkPath: 'https://www.instagram.com/techgater',
+    linkPath: 'https://www.instagram.com/fashion_needles/',
     icon: <IoLogoInstagram className="insta" />
   },
   {
-    name: 'linkedin',
-    linkPath: 'https://www.linkedin.com/company/89683736/admin',
-    icon: <FaLinkedin className="linkedin" />
+    name: 'Twitter',
+    linkPath: 'https://twitter.com/@fashion_needles',
+    icon: <BiX className="linkedin" />
   },
   {
     name: 'youtube',
-    linkPath: 'https://www.youtube.com/@techgaterwebsolutions7394',
+    linkPath: 'https://www.youtube.com/@fashion_needles',
     icon: <IoLogoYoutube className="youtube" />
   }
 ];
@@ -86,7 +88,6 @@ export default function Footer() {
             justifyContent: 'center',
             position: 'relative',
             width: '100%',
-
             margin: 'auto',
             '&:before': {
               content: "''",
@@ -159,7 +160,7 @@ export default function Footer() {
           </Grid>
 
           <Typography variant="body1" color="text.primary" textAlign="center">
-            © 2023 Commercehope. All rights reserved
+            © 2024 fashionneedles.com. All rights reserved
           </Typography>
         </Stack>
       </Container>

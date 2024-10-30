@@ -93,7 +93,7 @@ export default function Navbar({ isAuth }) {
           <Stack width={203}>
             <MainLogo />
           </Stack>
-          {isLoading ? <Skeletons /> : <MenuDesktop isHome={isHome} navConfig={menu} categories={data?.data} />}
+          {isLoading ? <Skeletons /> : <MenuDesktop   isHome={isHome} navConfig={menu} categories={data?.data} />}
 
           <Stack gap={0.1} direction="row" alignItems={'center'}>
             <Search />

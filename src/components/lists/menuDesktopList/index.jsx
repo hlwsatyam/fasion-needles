@@ -20,24 +20,18 @@ MenuDesktopList.propTypes = {
   onClose: PropTypes.func.isRequired
 };
 export default function MenuDesktopList({ ...props }) {
-  const { parent, onClose } = props;
-
+  const { parent,currentName, onClose } = props;
+console.log(currentName)
   return (
     <RootStyled disablePadding>
       <>
-        <ListSubheader
-          disableSticky
-          disableGutters
-          className="list-subheader"
-          onClick={() => {
-            onClose();
-          }}
-          component={NextLink}
-          href={'/products/' + parent?.slug}
-        >
-          {parent?.name}
-        </ListSubheader>
+         
+         
+     
         {parent?.subCategories?.map((subCategory) => (
+             parent.name !== currentName ? (
+            ''
+          ) : 
           <React.Fragment key={Math.random()}>
             <ListItem
               className="list-item"

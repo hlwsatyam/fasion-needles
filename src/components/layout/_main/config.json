@@ -8,19 +8,6 @@
       "title": "Categories",
       "path": "h",
       "isDropdown": true
-    },
-   
-    {
-      "title": "Men",
-      "path": "/products?gender=men"
-    },
-    {
-      "title": "Women",
-      "path": "/products?gender=women"
-    },
-    {
-      "title": "Kids",
-      "path": "/products?gender=kids"
     }
   ],
   "mobile_menu": [
@@ -63,11 +50,9 @@
     {
       "headline": "Menu",
       "children": [
-        
         {
           "name": "Categories",
           "href": ""
-        
         },
         {
           "name": "Products",
@@ -90,10 +75,9 @@
     {
       "headline": "Product",
       "children": [
-        { "name": "application", "href": "#" },
-        { "name": "features", "href": "#" },
-        { "name": "Requirements", "href": "#" },
-        { "name": "Technology", "href": "#" }
+        { "name": "Track Order", "href": "#" },
+        { "name": "Careers", "href": "#" },
+        { "name": "Whatsapp", "href": "#" }
       ]
     },
     {
@@ -101,7 +85,7 @@
       "children": [
         { "name": "FAQ", "href": "faqs" },
         { "name": "T&C", "href": "tac" },
-        { "name": "Terms Of Use", "href": "termsofuses" },
+
         { "name": "Cancellation Policy", "href": "cancellationpolicy" },
         { "name": "Returns", "href": "returns" },
         { "name": "Privacy Policy", "href": "privacypolicy" }

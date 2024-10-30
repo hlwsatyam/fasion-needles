@@ -318,14 +318,12 @@ export default function ShopProductCard({ ...props }) {
               'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
             )}
           </Typography>
-
           <Stack spacing={0.5}>
             <Typography variant="subtitle2" fontWeight={600}>
               {loading ? <Skeleton variant="text" width={50} /> : 'Size'}
             </Typography>
             <SizePreview size={currentSize} setSize={setSize} sizes={product?.sizes} loading={loading} />
           </Stack>
-
           <Stack spacing={0.5} direction="row" justifyContent={'space-between'} alignItems="center">
             <Typography
               variant={isMobile ? 'body2' : 'h5'}

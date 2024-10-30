@@ -33,7 +33,9 @@ function MenuDesktopItem({ ...props }) {
   const { title, path, isDropdown } = item;
   const anchorRef = React.useRef(null);
   const isActive = pathname === path;
+ 
 
+  
   if (isDropdown) {
     return (
       <>
@@ -45,7 +47,6 @@ function MenuDesktopItem({ ...props }) {
           aria-expanded={isOpen ? 'true' : undefined}
           aria-haspopup="true"
           onClick={onOpen}
-          
           sx={{
             display: 'flex',
             cursor: 'pointer',
@@ -81,7 +82,51 @@ function MenuDesktopItem({ ...props }) {
             )}
           </>
         </Link>
+        <Link
+          ref={anchorRef}
+          className={` ${isOffset && isHome && 'offset'}`}
+          id="composition-button"
+          aria-controls={isOpen ? 'composition-menu' : undefined}
+          aria-expanded={isOpen ? 'true' : undefined}
+          aria-haspopup="true"
+          onClick={onOpen}
+          sx={{
+            display: 'flex',
+            cursor: 'pointer',
+            alignItems: 'center',
+            ...typography.subtitle2,
+            color: 'text.primary',
+            textDecoration: 'none',
+            fontWeight: 500,
+            transition: '.2s ease-in',
+            cursor: 'pointer',
+            '&:hover': {
+              color: 'primary.main',
+              textDecoration: 'none'
+            },
+            '&.offset': {
+              color: 'text.primary'
+            },
+            '&.active': {
+              color: 'primary.main'
+            },
+            '& .link-icon': {
+              ml: 0.5,
+              fontSize: 16
+            }
+          }}
+        >
+          <>
+            Woman
+            {isOpen ? (
+              <KeyboardArrowUpRoundedIcon className="link-icon" />
+            ) : (
+              <KeyboardArrowDownRoundedIcon className="link-icon" />
+            )}
+          </>
+        </Link>
         <MenuDesktopPopover
+          
           isOpen={isOpen}
           scrollPosition={scrollPosition}
           onClose={onClose}
