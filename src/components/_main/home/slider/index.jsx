@@ -1,27 +1,17 @@
 "use client";
 import React from 'react';
 import Slider from 'react-slick';
-import { Box, CardMedia } from '@mui/material';
+import { Box } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import f from '../../../../../public/b1.jpg'
-import g from '../../../../../public/b2.webp'
 import Image from 'next/image';
+
 const BannerCarousel = ({
   banners = [
-     
-    {
-      image: f,
-    },
-    {
-      image: g,
-    },
-    {
-      image: f,
-    },
-     
-    
-   
+    { image: require('../../../../../public/b3.png') },
+    { image: require('../../../../../public/b8.png') },
+    { image: require('../../../../../public/b4.png') },
+    { image: require('../../../../../public/b7.png') },
   ]
 }) => {
   const settings = {
@@ -32,8 +22,6 @@ const BannerCarousel = ({
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '18%',
     appendDots: (dots) => (
       <Box sx={{ padding: "10px", position: "absolute", bottom: "10px", left: "50%", transform: "translateX(-50%)" }}>
         <ul style={{ margin: 0, display: 'flex', justifyContent: 'center', listStyleType: 'none' }}>
@@ -48,7 +36,7 @@ const BannerCarousel = ({
           height: '10px',
           borderRadius: '50%',
           background: 'gray',
-          margin: '0 0',
+          margin: '0 5px',
           cursor: 'pointer',
           '&.slick-active': {
             background: 'black',
@@ -61,23 +49,23 @@ const BannerCarousel = ({
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: '100%', margin: 'auto', borderRadius: 2, overflow: 'hidden', position: 'relative' }}>
+    <Box sx={{ width: '100%', margin: 'auto', borderRadius: 2, overflow: 'hidden', position: 'relative' }}>
       <Slider {...settings}>
         {banners.map((banner, index) => (
-          <div key={index}>
-            <Box sx={{ position: 'relative', height: { xs: 200, sm: 300, md: 500 } }}>
+          <Box key={index} sx={{ width: '100vw', height: { xs: '200px', sm: '300px', md: '100vh' }, position: 'relative' }}>
             <Image
-                  src={banner.image}
-                  alt={`Slide ${index + 1}`}
-                  layout="fill"
-                  objectFit="contain"
-                  style={{
-                   
-                    borderRadius: '12px',
-                  }}
-                />
-            </Box>
-          </div>
+              src={banner.image}
+              alt={`Slide ${index + 1}`}
+              layout="fill"
+              style={{
+                aspectRatio: '16 / 9',  
+                objectFit: 'contain',  
+                objectPosition: 'center',  
+
+              }}
+              
+            />
+          </Box>
         ))}
       </Slider>
     </Box>
@@ -92,7 +80,6 @@ const SampleNextArrow = (props) => {
       className={className}
       style={{
         ...style,
-        display: 'block',
         background: 'black',
         borderRadius: '50%',
         width: '30px',
@@ -116,14 +103,13 @@ const SamplePrevArrow = (props) => {
       className={className}
       style={{
         ...style,
-        display: 'block',
         background: 'black',
         borderRadius: '50%',
         width: '30px',
+        height: '30px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '30px',
         left: '10px',
         zIndex: 1,
       }}

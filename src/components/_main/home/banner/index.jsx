@@ -56,16 +56,16 @@ export default function Banner() {
             <Grid item xs={6} md={6}>
               <Stack spacing={2}>
                 <Typography variant="h2" fontWeight={900}>
-                  UK Premier Store for Wrist Watches
+                  Trendy Dresses for Girls
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
-                  Welcome to our world of horological excellence, where timepieces become timeless statements of
-                  elegance. Our collection showcases an unparalleled selection of premium watches, curated from renowned
-                  luxury brands around the globe.
+                  Discover our exquisite collection of trendy dresses that blend style and comfort, perfect for every
+                  occasion. At Fashion Needles, we believe in empowering young girls to express themselves through
+                  fashion, featuring designs that are both fun and fashionable, from playful prints to elegant styles.
                 </Typography>
                 <Box>
                   <Button component={Link} href="/products" variant="contained" color="success" size="large">
-                    View more
+                    Explore the Collection
                   </Button>
                 </Box>
               </Stack>

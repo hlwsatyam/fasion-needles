@@ -102,7 +102,8 @@ export default function Index() {
                   display={{ md: 'block', xs: 'none' }}
                   width={{ xl: 270 }}
                 >
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                  Affordable Prices
+                  Best Quality Shopping
                 </Typography>
                 <Box>
                   <Button
@@ -178,7 +179,7 @@ export default function Index() {
                     }
                   }}
                 >
-                  Women Latest Fashion
+                Winter Collection
                 </Typography>
                 <Typography
                   variant={isDeskTop ? 'subtitle1' : 'subtitle2'}
@@ -206,9 +207,9 @@ export default function Index() {
                       }
                     }}
                   >
-                    25%
+                    Free
                   </Box>
-                  Off on first order
+                  Delevery On Every Product
                 </Typography>
                 <Typography
                   variant={isDeskTop ? 'body1' : 'body2'}
@@ -216,8 +217,8 @@ export default function Index() {
                   mb={2}
                   display={{ md: 'block', xs: 'none' }}
                 >
-                  Lorem Ipsum is simply dummy text of the <br />
-                  printing and typesetting industry
+                 Shop a latest collection of women's fashion <br />
+                 and winter collection
                 </Typography>
                 <Box>
                   <Button

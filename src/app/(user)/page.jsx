@@ -18,28 +18,26 @@ export default async function IndexPage() {
   return (
     <>
       <Slider />
-     <Hero />
-     
       <Container fixed>
-        <Categories />
+        <Suspense>
+          <Brands />
+        </Suspense>
+      </Container>
+      <Hero />
+      <Container fixed>
+      <Categories />
         <Suspense>
           <TopCollections />
         </Suspense>
       </Container>
-      
       <TopBanners />
       <Container fixed>
         <Suspense>
           <BestSeller />
         </Suspense>
-        <Banner /> 
-        <Suspense>
-          <Brands />
-        </Suspense>
+        <Banner />
         <WhyUs />
       </Container>
     </>
   );
 }
-
-

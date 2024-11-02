@@ -30,7 +30,7 @@ export default function AdminBestSelling({ ...props }) {
           />
         ) : (
           <CardContent>
-            {(loading ? Array.from(new Array(5)) : data).map((value, index, array) => (
+            {(loading ? Array.from(new Array(5)) : data)?.map((value, index, array) => (
               <React.Fragment key={index}>
                 <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={2} py={1}>
                   <Stack direction="row" alignItems="center" spacing={2}>

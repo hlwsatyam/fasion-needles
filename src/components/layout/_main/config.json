@@ -50,10 +50,7 @@
     {
       "headline": "Menu",
       "children": [
-        {
-          "name": "Categories",
-          "href": ""
-        },
+       
         {
           "name": "Products",
           "href": "/products"
@@ -75,9 +72,9 @@
     {
       "headline": "Product",
       "children": [
-        { "name": "Track Order", "href": "#" },
-        { "name": "Careers", "href": "#" },
-        { "name": "Whatsapp", "href": "#" }
+        { "name": "Track Order", "href": "track-order" },
+        { "name": "Careers", "href": "careers" },
+        { "name": "Whatsapp", "href": "https://wa.link/y74jkl" }
       ]
     },
     {
