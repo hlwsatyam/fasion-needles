@@ -121,7 +121,7 @@ export default function AccountGeneral() {
       });
       const formData = new FormData();
       formData.append('file', file);
-      formData.append('upload_preset', 'my-uploads');
+      formData.append('upload_preset', 'fezrhfpj');
 
       const config = {
         onUploadProgress: (progressEvent) => {
@@ -131,7 +131,7 @@ export default function AccountGeneral() {
         }
       };
       await axios
-        .post(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`, formData, config)
+        .post(`https://api.cloudinary.com/v1_1/docjvlprh/image/upload`, formData, config)
         .then(({ data }) => {
           setFieldValue('cover', {
             _id: data.public_id,

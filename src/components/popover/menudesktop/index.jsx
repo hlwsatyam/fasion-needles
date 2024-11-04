@@ -8,8 +8,13 @@ import MenuDesktopList from 'src/components/lists/menuDesktopList';
 import MenuPopover from 'src/components/popover/popover';
 
 export default function MenuDesktop({ ...props }) {
-  const { isOpen, currentName, onClose, isLoading, data } = props;
- 
+  const { isOpen, clickedBar, onClose, isLoading, data } = props;
+  const [currentName, setCurrentName] = React.useState('');
+
+  React.useEffect(() => {
+    const currentName = localStorage.getItem('category');
+    setCurrentName(currentName);
+  }, []);
   return (
     <MenuPopover
       open={isOpen}
@@ -25,13 +30,15 @@ export default function MenuDesktop({ ...props }) {
       }}
     >
       <Grid container spacing={3}>
-        {data?.map((parent) => {
-      return   (
-            <Grid item lg={2} key={Math.random()}>
-              <MenuDesktopList currentName={currentName} parent={parent} isLoading={isLoading} onClose={onClose} />
+        {data?.map((parent) =>
+          parent.name !== currentName ? (
+            ''
+          ) : (
+            <Grid item   key={Math.random()}>
+              <MenuDesktopList currentName={clickedBar} parent={parent} isLoading={isLoading} onClose={onClose} />
             </Grid>
-          );
-        })}
+          )
+        )}
       </Grid>
     </MenuPopover>
   );

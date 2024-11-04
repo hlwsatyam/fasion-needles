@@ -52,15 +52,13 @@ const BannerCarousel = ({
     <Box sx={{ width: '100%', margin: 'auto', borderRadius: 2, overflow: 'hidden', position: 'relative' }}>
       <Slider {...settings}>
         {banners.map((banner, index) => (
-          <Box key={index} sx={{ width: '100vw', height: { xs: '200px', sm: '300px', md: '100vh' }, position: 'relative' }}>
+          <Box key={index} sx={{ width: '100%', height: { xs: '200px', sm: '300px', md: '80vh' }, position: 'relative' }}>
             <Image
               src={banner.image}
               alt={`Slide ${index + 1}`}
               layout="fill"
               style={{
-                aspectRatio: '16 / 9',  
-                objectFit: 'contain',  
-                objectPosition: 'center',  
+                
 
               }}
               

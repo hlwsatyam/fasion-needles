@@ -8,9 +8,9 @@ import BreadcrumbsSkeleton from 'src/components/_main/skeletons/products/breadcr
 import ProductCard from 'src/components/_main/skeletons/products/productCard';
 // Meta information
 export const metadata = {
-  title: 'Wishlist | Commercehope - Save Your Favorite Items for Later',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Wishlist | fasion needles - Save Your Favorite Items for Later',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 // components
 const HeaderBreadcrumbs = dynamic(() => import('src/components/headerBreadcrumbs'), {

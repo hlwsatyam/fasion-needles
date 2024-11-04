@@ -4,9 +4,9 @@ import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 import NewsletterList from 'src/components/_admin/newsletter/newsletterList';
 // Meta information
 export const metadata = {
-  title: 'Newsletter - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Newsletter - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function page() {
   return (

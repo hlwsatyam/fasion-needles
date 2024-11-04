@@ -22,7 +22,7 @@ const nextConfig = {
     PAYPAL_CLIENT_ID: process.env.PAYPAL_CLIENT_ID
   },
   images: {
-    domains: ['commercehope-app.vercel.app"', 'res.cloudinary.com']
+    domains: ['fasion needles-app.vercel.app"', 'res.cloudinary.com']
   }
 };
 

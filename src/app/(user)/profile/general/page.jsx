@@ -6,9 +6,9 @@ import dynamic from 'next/dynamic';
 import Breadcrumbs from 'src/components/skeletons/breadcrumbs';
 // Meta information
 export const metadata = {
-  title: 'Commercehope - Your Gateway to Seamless Shopping and Secure Transactions',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'fasion needles - Your Gateway to Seamless Shopping and Secure Transactions',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 import GeneralSkeleton from 'src/components/_main/skeletons/profile/general';
 

@@ -63,8 +63,8 @@ export default function LoginForm() {
   });
   const formik = useFormik({
     initialValues: {
-      email: 'test@commercehope.com',
-      password: 'test1234',
+      email: '',
+      password: '',
       remember: true
     },
     validationSchema: LoginSchema,

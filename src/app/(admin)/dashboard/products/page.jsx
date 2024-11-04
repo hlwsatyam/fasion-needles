@@ -6,9 +6,9 @@ import Toolbar from 'src/components/_admin/toolbar';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 // Meta information
 export const metadata = {
-  title: 'Products - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Products - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default async function AdminProducts() {
   return (

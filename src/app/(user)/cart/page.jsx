@@ -7,13 +7,13 @@ import CartMain from 'src/components/_main/cart';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 // Meta information
 export const metadata = {
-  title: 'Commercehope Shopping Cart | Commercehope - Convenient Shopping Cart for Easy Checkout',
+  title: 'fasion needles Shopping Cart | fasion needles - Convenient Shopping Cart for Easy Checkout',
   description:
-    'View your shopping cart on Commercehope for easy checkout. Add, remove, and manage items effortlessly. Enjoy a seamless shopping experience with secure transactions and personalized recommendations. Explore your cart now!',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope',
+    'View your shopping cart on fasion needles for easy checkout. Add, remove, and manage items effortlessly. Enjoy a seamless shopping experience with secure transactions and personalized recommendations. Explore your cart now!',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles',
   keywords:
-    'shopping cart, Commercehope, view cart, cart items, add to cart, remove from cart, manage cart, checkout, online shopping, secure transactions, personalized recommendations, seamless shopping, convenient shopping'
+    'shopping cart, fasion needles, view cart, cart items, add to cart, remove from cart, manage cart, checkout, online shopping, secure transactions, personalized recommendations, seamless shopping, convenient shopping'
 };
 
 export default async function Cart() {

@@ -7,12 +7,12 @@ import RegisterMain from 'src/components/_main/auth/register';
 
 // Meta information
 export const metadata = {
-  title: 'Create Your Commercehope Account | Join Us for Exclusive Deals and Seamless Shopping',
+  title: 'Create Your fasion needles Account | Join Us for Exclusive Deals and Seamless Shopping',
   description:
-    'Register with Commercehope today to unlock a world of exclusive deals, personalized recommendations, and secure transactions. Join our community for a seamless shopping experience. Sign up now and elevate your online shopping journey!',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope',
-  keywords: 'ecommerce, Commercehope, Commerce, Register Commercehope, RegisterFrom Commercehope'
+    'Register with fasion needles today to unlock a world of exclusive deals, personalized recommendations, and secure transactions. Join our community for a seamless shopping experience. Sign up now and elevate your online shopping journey!',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles',
+  keywords: 'ecommerce, fasion needles, Commerce, Register fasion needles, RegisterFrom fasion needles'
 };
 
 export default async function Register() {

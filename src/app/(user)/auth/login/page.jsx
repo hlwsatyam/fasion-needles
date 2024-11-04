@@ -8,12 +8,12 @@ import LoginMain from 'src/components/_main/auth/login';
 
 // Meta information
 export const metadata = {
-  title: 'Login to Commercehope | Your Gateway to Seamless Shopping and Secure Transactions',
+  title: 'Login to fasion needles | Your Gateway to Seamless Shopping and Secure Transactions',
   description:
-    'Log in to Commercehope for secure access to your account. Enjoy seamless shopping, personalized experiences, and hassle-free transactions. Your trusted portal to a world of convenience awaits. Login now!',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope',
-  keywords: 'ecommerce, Commercehope, Commerce, Login Commercehope, LoginFrom Commercehope'
+    'Log in to fasion needles for secure access to your account. Enjoy seamless shopping, personalized experiences, and hassle-free transactions. Your trusted portal to a world of convenience awaits. Login now!',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles',
+  keywords: 'ecommerce, fasion needles, Commerce, Login fasion needles, LoginFrom fasion needles'
 };
 
 export default async function Login() {

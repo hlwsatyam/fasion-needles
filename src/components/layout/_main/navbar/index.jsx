@@ -63,9 +63,7 @@ export default function Navbar({ isAuth }) {
   const isHome = pathname === '/';
   const { checkout } = useSelector(({ product }) => product);
   const isMobile = useMediaQuery('(max-width:768px)');
-
   const { data, isLoading } = useQuery(['get-categories-all'], () => api.getAllCategories());
-
   return (
     <>
       <AppBar

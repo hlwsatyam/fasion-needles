@@ -106,7 +106,7 @@ l-14 72 -41 -1 c-23 0 -60 -8 -82 -17z"
           }}
         >
           <Typography variant="h5" color="text.primary" lineHeight={1}>
-            Commercehope
+            fasion needles
           </Typography>
           <Typography color="text.primary" fontSize={8.7} ml={0.1}>
             Reactjs ecommerce script you need

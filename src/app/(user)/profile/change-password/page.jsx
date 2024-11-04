@@ -5,9 +5,9 @@ import { Card, Container, Stack, Typography } from '@mui/material';
 import dynamic from 'next/dynamic';
 // Meta information
 export const metadata = {
-  title: 'Change Password | Commercehope - Update Your Account Password Securely',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Change Password | fasion needles - Update Your Account Password Securely',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 
 import ChangePasswordSkeleton from 'src/components/_main/skeletons/auth/change-password/change-password';

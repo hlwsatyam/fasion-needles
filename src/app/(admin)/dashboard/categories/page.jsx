@@ -5,9 +5,9 @@ import Toolbar from 'src/components/_admin/toolbar';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 // Meta information
 export const metadata = {
-  title: 'Categories - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Categories - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function Categories() {
   return (

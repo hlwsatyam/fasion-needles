@@ -4,9 +4,9 @@ import Toolbar from 'src/components/_admin/toolbar';
 import AccountGeneral from 'src/components/_main/profile/edit/accountGeneral';
 // Meta information
 export const metadata = {
-  title: 'Setting - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Setting - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function page() {
   return (

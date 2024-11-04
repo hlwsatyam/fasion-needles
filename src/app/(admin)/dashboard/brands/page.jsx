@@ -8,9 +8,9 @@ import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 
 // Meta information
 export const metadata = {
-  title: 'Brands - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Brands - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function Brands() {
   return (

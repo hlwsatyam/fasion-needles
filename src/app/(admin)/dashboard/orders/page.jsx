@@ -5,9 +5,9 @@ import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 import OrdersList from 'src/components/_admin/orders/ordersList';
 // Meta information
 export const metadata = {
-  title: 'Order - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Order - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function page() {
   return (

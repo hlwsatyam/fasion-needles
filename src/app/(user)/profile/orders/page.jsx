@@ -5,9 +5,9 @@ import { Container } from '@mui/material';
 import dynamic from 'next/dynamic';
 // Meta information
 export const metadata = {
-  title: 'Invoice | Commercehope - Your Order Details and Payment Confirmation',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Invoice | fasion needles - Your Order Details and Payment Confirmation',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 // skeleton
 import HeaderBreadcrumbsSkeleton from 'src/components/skeletons/breadcrumbs';

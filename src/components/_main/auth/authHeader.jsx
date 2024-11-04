@@ -13,7 +13,7 @@ export default function AuthHeader() {
           Welcome
         </Typography>
         <Typography textAlign="center" variant="h2" color="primary.contrastText" className="company-name">
-          Commercehope
+          fasion needles
         </Typography>
         <Typography
           textAlign="center"

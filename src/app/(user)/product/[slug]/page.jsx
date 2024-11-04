@@ -22,14 +22,14 @@ export async function generateMetadata({ params }) {
   const { data: response } = await fetch(process.env.BASE_URL + '/api/products/' + params.slug).then((res) =>
     res.json()
   );
-
+ 
   return {
     title: response.metaTitle,
     description: response.metaDescription,
     keywords: response.tags,
     title: response.name,
     openGraph: {
-      images: response.images.map((v) => v.url)
+      images: response?.images.map((v) => v.url)
     }
   };
 }

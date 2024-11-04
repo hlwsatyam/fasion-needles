@@ -5,9 +5,9 @@ import AddCategory from 'src/components/_admin/categories/addCategory';
 
 // Meta information
 export const metadata = {
-  title: 'Add Categories - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'Add Categories - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 
 export default function page() {

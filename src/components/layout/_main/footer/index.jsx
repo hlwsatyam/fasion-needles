@@ -9,13 +9,14 @@ import { Typography, Container, Stack, Box, IconButton, Grid } from '@mui/materi
 import NextLink from 'next/link';
 // components
 import NewsLetter from './newsletter';
-
+import logo from '../../../../../public/fashionneedles_logo.webp';
 // icons
 import { IoLogoInstagram } from 'react-icons/io5';
-import { FaFacebook,   FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { IoLogoYoutube } from 'react-icons/io';
- 
+
 import { BiX } from 'react-icons/bi';
+import Image from 'next/image';
 
 const SOCIAL_MEDIA_LINK = [
   {
@@ -102,40 +103,41 @@ export default function Footer() {
             }
           }}
         >
-          <Typography variant="h2" color="text.primary" fontWeight={700}>
-            Newsletter
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Subscribe to our newsletter and stay updated with the latest news and
-          </Typography>
-          <NewsLetter />
-          <Stack direction="row" spacing={3} justifyContent="center">
-            {SOCIAL_MEDIA_LINK.map((item, index) => (
-              <React.Fragment key={index}>
-                <IconButton
-                  aria-label=""
-                  name={name}
-                  component={NextLink}
-                  href={item.linkPath}
-                  target="_blank"
-                  sx={{
-                    color: (theme) =>
-                      index === 0 || index === 2 ? theme.palette.primary.main : theme.palette.error.main,
-                    fontSize: 28
-                  }}
-                >
-                  {item.icon}
-                </IconButton>
-              </React.Fragment>
-            ))}
-          </Stack>
-          <Grid container spacing={4}>
+          <Grid
+            container
+            style={{
+              textAlign: 'left'
+            }}
+            spacing={3}
+          >
             {footerList.footer_links.map((section, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid item xs={6} sm={4} md={3} key={index}>
                 <Box>
-                  <Typography variant="h6" color="text.primary" gutterBottom>
+                  <Typography
+                    variant="h6"
+                    style={{
+                      borderBottom: '1px solid #e0e0e0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      columnGap: 5
+                    }}
+                    color="text.primary"
+                    gutterBottom
+                  >
                     {section.headline}
+                    {section.headline === 'COMPONY' && (
+                      <Image
+                        src={logo}
+                        style={{
+                         
+                          quality: 100
+                        }}
+                        width={30}
+                        height={30}
+                      />
+                    )}
                   </Typography>
+
                   <Stack spacing={1}>
                     {section.children.map((link, linkIndex) => (
                       <NextLink key={linkIndex} href={link.href} passHref>
@@ -156,11 +158,46 @@ export default function Footer() {
                 </Box>
               </Grid>
             ))}
-          
           </Grid>
 
+          <Stack
+            direction="row"
+            style={{
+              borderTop: '1px solid #e0e0e0',
+              borderBottom: '1px solid #e0e0e0'
+            }}
+            spacing={3}
+            justifyContent="center"
+          >
+            {SOCIAL_MEDIA_LINK.map((item, index) => (
+              <React.Fragment key={index}>
+                <IconButton
+                  aria-label=""
+                  name={name}
+                  component={NextLink}
+                  href={item.linkPath}
+                  target="_blank"
+                  sx={{
+                    color: (theme) =>
+                      index === 0 || index === 2 ? theme.palette.primary.main : theme.palette.error.main,
+                    fontSize: 28
+                  }}
+                >
+                  {item.icon}
+                </IconButton>
+              </React.Fragment>
+            ))}
+          </Stack>
+
+          {/* <Typography variant="h2" color="text.primary" fontWeight={700}>
+            Newsletter
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Subscribe to our newsletter and stay updated with the latest news and
+          </Typography>
+          <NewsLetter /> */}
           <Typography variant="body1" color="text.primary" textAlign="center">
-            © 2024 fashionneedles.com. All rights reserved
+            © 2024 Fashion Needles. All rights reserved
           </Typography>
         </Stack>
       </Container>

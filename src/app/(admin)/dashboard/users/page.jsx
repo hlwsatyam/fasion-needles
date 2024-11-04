@@ -6,9 +6,9 @@ import UsersList from 'src/components/_admin/users/userList';
 
 // Meta information
 export const metadata = {
-  title: 'User - Commercehope',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope'
+  title: 'User - fasion needles',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles'
 };
 export default function page() {
   return (

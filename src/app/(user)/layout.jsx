@@ -8,17 +8,17 @@ import { cookies } from 'next/headers';
 
 // Meta information
 export const metadata = {
-  title: 'Commercehope E-commerce Script | Your Gateway to Seamless Shopping and Secure Transactions',
+  title: 'fasion needles E-commerce Script | Your Gateway to Seamless Shopping and Secure Transactions',
   description:
-    'Log in to Commercehope for secure access to your account. Enjoy seamless shopping, personalized experiences, and hassle-free transactions. Your trusted portal to a world of convenience awaits. Login now!',
-  applicationName: 'Commercehope',
-  authors: 'Commercehope',
-  keywords: 'ecommerce, Commercehope, Commerce, Login Commercehope, LoginFrom Commercehope',
+    'Log in to fasion needles for secure access to your account. Enjoy seamless shopping, personalized experiences, and hassle-free transactions. Your trusted portal to a world of convenience awaits. Login now!',
+  applicationName: 'fasion needles',
+  authors: 'fasion needles',
+  keywords: 'ecommerce, fasion needles, Commerce, Login fasion needles, LoginFrom fasion needles',
   icons: {
     icon: '/favicon.png'
   },
   openGraph: {
-    images: 'https://commercehope-app.vercel.app/opengraph-image.png'
+    images: 'https://fasion needles-app.vercel.app/opengraph-image.png'
   }
 };
 

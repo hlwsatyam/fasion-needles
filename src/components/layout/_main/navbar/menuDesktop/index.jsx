@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
@@ -33,9 +33,11 @@ function MenuDesktopItem({ ...props }) {
   const { title, path, isDropdown } = item;
   const anchorRef = React.useRef(null);
   const isActive = pathname === path;
- 
+  const[isMenOpen, setIsMenOpen] = useState(false)
+  const [isWomanOpen, setIsWomanOpen] = useState(false)
+  const [isKidsOpen, setIsKidsOpen] = useState(false)
+  const [isAccessoriesOpen, setIsAccessoriesOpen] = useState(false)
 
-  
   if (isDropdown) {
     return (
       <>
@@ -46,7 +48,14 @@ function MenuDesktopItem({ ...props }) {
           aria-controls={isOpen ? 'composition-menu' : undefined}
           aria-expanded={isOpen ? 'true' : undefined}
           aria-haspopup="true"
-          onClick={onOpen}
+          onClick={(w)=>{
+            onOpen(w)
+            setIsMenOpen(true)
+            s()
+            function s() {
+              localStorage.setItem('category', 'Men')
+            }
+          }}
           sx={{
             display: 'flex',
             cursor: 'pointer',
@@ -75,7 +84,7 @@ function MenuDesktopItem({ ...props }) {
         >
           <>
             Men
-            {isOpen ? (
+            {isMenOpen ? (
               <KeyboardArrowUpRoundedIcon className="link-icon" />
             ) : (
               <KeyboardArrowDownRoundedIcon className="link-icon" />
@@ -89,7 +98,13 @@ function MenuDesktopItem({ ...props }) {
           aria-controls={isOpen ? 'composition-menu' : undefined}
           aria-expanded={isOpen ? 'true' : undefined}
           aria-haspopup="true"
-          onClick={onOpen}
+          onClick={(w)=>{
+            onOpen(w)
+            s()
+            function s() {
+              localStorage.setItem('category', 'Woman')
+            }
+          }}
           sx={{
             display: 'flex',
             cursor: 'pointer',
@@ -118,15 +133,64 @@ function MenuDesktopItem({ ...props }) {
         >
           <>
             Woman
-            {isOpen ? (
+            {isWomanOpen ? (
               <KeyboardArrowUpRoundedIcon className="link-icon" />
             ) : (
               <KeyboardArrowDownRoundedIcon className="link-icon" />
             )}
           </>
         </Link>
+        <Link
+          ref={anchorRef}
+          className={` ${isOffset && isHome && 'offset'}`}
+          id="composition-button"
+          aria-controls={isOpen ? 'composition-menu' : undefined}
+          aria-expanded={isOpen ? 'true' : undefined}
+          aria-haspopup="true"
+          onClick={(w)=>{
+            onOpen(w)
+            s()
+            function s() {
+              localStorage.setItem('category', 'accessories')
+            }
+          }}
+          sx={{
+            display: 'flex',
+            cursor: 'pointer',
+            alignItems: 'center',
+            ...typography.subtitle2,
+            color: 'text.primary',
+            textDecoration: 'none',
+            fontWeight: 500,
+            transition: '.2s ease-in',
+            cursor: 'pointer',
+            '&:hover': {
+              color: 'primary.main',
+              textDecoration: 'none'
+            },
+            '&.offset': {
+              color: 'text.primary'
+            },
+            '&.active': {
+              color: 'primary.main'
+            },
+            '& .link-icon': {
+              ml: 0.5,
+              fontSize: 16
+            }
+          }}
+        >
+          <>
+            Accessories
+            {isWomanOpen ? (
+              <KeyboardArrowUpRoundedIcon className="link-icon" />
+            ) : (
+              <KeyboardArrowDownRoundedIcon className="link-icon" />
+            )}
+          </>
+        </Link>
+        
         <MenuDesktopPopover
-          
           isOpen={isOpen}
           scrollPosition={scrollPosition}
           onClose={onClose}
