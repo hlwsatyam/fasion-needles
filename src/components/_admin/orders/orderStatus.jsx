@@ -29,8 +29,8 @@ export default function SelectOrderStatus({ data }) {
       toast.success(data.message);
       router.push('/dashboard/orders');
     },
-    onError: () => {
-      toast.error('Something went wrong!');
+    onError: (err) => {
+      toast.error(err.message ||'Something went wrong!');
     }
   });
   const [anchorEl, setAnchorEl] = React.useState(null);

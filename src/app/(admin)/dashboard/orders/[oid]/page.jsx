@@ -12,6 +12,8 @@ import * as api from 'src/services';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
 import PropTypes from 'prop-types';
+import TrackOrder from 'src/app/(user)/track-order/page';
+import TrackDelevery from 'src/components/track-order/TrackDelevery';
 
 Page.propTypes = {
   params: PropTypes.shape({
@@ -50,6 +52,9 @@ export default function Page({ params }) {
           }
         />
       </Toolbar>
+
+      <TrackDelevery />
+
       <Container fixed>
         <Grid container direction={{ xs: 'row', md: 'row-reverse' }} spacing={2}>
           <Grid item xs={12} md={4}>

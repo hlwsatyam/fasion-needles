@@ -137,7 +137,7 @@ const CheckoutMain = () => {
     onSubmit: async (values) => {
       const items = cart.map(({ ...others }) => others);
       const totalItems = sum(items.map((item) => item.quantity));
-       
+
       const data = {
         paymentMethod: paymentMethod,
         items: items,
@@ -150,7 +150,6 @@ const CheckoutMain = () => {
         onSubmit(data);
       }
       if (data.paymentMethod === 'phonepe') {
-        
         let totalPrice = 0;
         data?.items.map((item) => {
           totalPrice += item.priceSale * item.quantity;
@@ -243,7 +242,7 @@ const CheckoutMain = () => {
       paymentId: paymentId
     });
   };
-
+ 
   return (
     <FormikProvider value={formik}>
       <Form autoComplete="off" noValidate onSubmit={handleSubmit}>
@@ -284,7 +283,7 @@ const CheckoutMain = () => {
                   type="submit"
                   loading={isLoading || isProcessing || loading}
                 >
-                  Place Order
+                  {paymentMethod != 'COD' ? 'Pay Now' : 'Place Order'}
                 </LoadingButton>
               </Collapse>
             </Grid>
