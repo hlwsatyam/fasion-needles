@@ -2,17 +2,35 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Button, Slide, Snackbar, Alert } from "@mui/material";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import axios from "axios";
+import { set } from "lodash";
 
 const TrackOrder = () => {
   const [orderID, setOrderID] = useState("");
-  const [orderFound, setOrderFound] = useState(false);
+  const [orderFound, setOrderFound] = useState(null);
   const [openToast, setOpenToast] = useState(false);
-
-  const handleTrackOrder = (e) => {
+const [message,setMessage]=useState("")
+  const handleTrackOrder = async (e) => {
     e.preventDefault();
-    // Simulate order tracking (integrate with your backend for actual tracking)
+
     if (orderID) {
-      setOrderFound(true); // Set based on actual backend response
+      try {
+        const res = await axios.get(`http://localhost:3000/api/getPackageInfo?ref_ids=${orderID}`);
+       
+
+        if (res.status===200  ) {
+        
+          setMessage("Status: "+ res.data?.data?.ShipmentData[0]?.Shipment?.Status?.Status +"  Product Location: " +res.data?.data?.ShipmentData[0]?.Shipment?.Status?.StatusLocation )
+          setOrderFound(true);
+        } else {
+          setMessage("Order not found")
+          setOrderFound(false);
+        }
+      } catch (error) {
+        setMessage("Order not found")
+        setOrderFound(false);
+      }
+
       setOpenToast(true);
     }
   };
@@ -69,11 +87,22 @@ const TrackOrder = () => {
           >
             Track Order
           </Button>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            {message}
+          </Typography>
         </Box>
       </Slide>
 
       <Snackbar open={openToast} autoHideDuration={3000} onClose={handleCloseToast}>
-        <Alert onClose={handleCloseToast}  style={{backgroundColor: orderFound ? "green" : "red",color: "white"}} severity={orderFound ? "success" : "error"} sx={{ width: '100%' }}>
+        <Alert
+          onClose={handleCloseToast}
+          severity={orderFound ? "success" : "error"}
+          sx={{
+            width: '100%',
+            backgroundColor: orderFound ? "green" : "red",
+            color: "white",
+          }}
+        >
           {orderFound ? "Order found! We’re preparing it for delivery." : "Order not found. Please check your Order ID."}
         </Alert>
       </Snackbar>

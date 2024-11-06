@@ -78,7 +78,7 @@ const CheckoutMain = () => {
       toast.success('Order placed!');
       setProcessingTo(false);
 
-      router.push(`/order/${data.orderId}`);
+      data.statusCode  &&  data.statusCode === 200 ? (window.location.href = data?.url) : router.push(`/order/${data.orderId}`);
       dispatch(resetCart());
     },
     onError: (err) => {
@@ -148,14 +148,6 @@ const CheckoutMain = () => {
       };
       if (data.paymentMethod === 'stripe') {
         onSubmit(data);
-      }
-      if (data.paymentMethod === 'phonepe') {
-        let totalPrice = 0;
-        data?.items.map((item) => {
-          totalPrice += item.priceSale * item.quantity;
-        });
-
-        phonepePayment(totalPrice, data);
       } else {
         mutate(data);
       }
@@ -242,7 +234,7 @@ const CheckoutMain = () => {
       paymentId: paymentId
     });
   };
- 
+
   return (
     <FormikProvider value={formik}>
       <Form autoComplete="off" noValidate onSubmit={handleSubmit}>

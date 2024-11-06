@@ -98,21 +98,21 @@ export default function Details({ ...props }) {
                 ) : (
                   <>
                     <Typography variant="body2">
-                      <strong>Method</strong>:{' '}
-                      {data?.paymentMethod === 'COD'
-                        ? 'Cash On Delivery'
-                        : data?.paymentMethod === 'PayPal'
-                          ? 'Paypal'
-                          : 'Credit Card'}
+                      <strong>Method</strong>: {data?.paymentMethod === 'COD' ? 'Cash On Delivery' : 'Online Payment'}
                     </Typography>
+                    {data?.paymentMethod !== 'COD' && (
+                      <Typography variant="body2">
+                        <strong>Payment Status</strong>: {data?.paymentStatus}
+                      </Typography>
+                    )}
                     {data?.paymentId && (
                       <Typography variant="body2">
                         <strong>Payment ID</strong>: {data?.paymentId}
                       </Typography>
                     )}
-
+                    v
                     <Typography variant="body2" textTransform="capitalize">
-                      <strong>Status</strong>: {data?.status}
+                      <strong>Delivery Status</strong>: {data?.status}
                     </Typography>
                     <Typography variant="body2" textTransform="capitalize">
                       <strong>Shipping Fee</strong>: {data?.currency} {fCurrency(data?.shipping)}

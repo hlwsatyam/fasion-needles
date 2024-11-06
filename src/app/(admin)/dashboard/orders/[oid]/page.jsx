@@ -12,7 +12,7 @@ import * as api from 'src/services';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
 import PropTypes from 'prop-types';
-import TrackOrder from 'src/app/(user)/track-order/page';
+ 
 import TrackDelevery from 'src/components/track-order/TrackDelevery';
 
 Page.propTypes = {
