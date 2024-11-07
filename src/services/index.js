@@ -1,18 +1,17 @@
 import http from './http';
 //----------------------------------
- 
+
 export const login = async (payload) => {
-  const { data } = await http.post(`/auth/login`, payload);
+  const { data } = await http.post('/auth/login', payload);
   return data;
 };
 export const register = async (payload) => {
- 
-  const { data } = await http.post(`/auth/register`, payload);
- 
+  const { data } = await http.post('/auth/register', payload);
+
   return data;
 };
 export const getUserCategories = async () => {
-  const { data } = await http.get(`/categories`);
+  const { data } = await http.get('/categories');
   return data;
 };
 export const getProducts = async (query = '') => {
@@ -20,11 +19,11 @@ export const getProducts = async (query = '') => {
   return data;
 };
 export const getAllProducts = async () => {
-  const { data } = await http.get(`/products/all`);
+  const { data } = await http.get('/products/all');
   return data;
 };
 export const getAllFilters = async () => {
-  const { data } = await http.get(`/products/filters`);
+  const { data } = await http.get('/products/filters');
   return data;
 };
 export const getFiltersByCategory = async (category) => {
@@ -36,7 +35,7 @@ export const getFiltersBySubCategory = async (category, subcategory) => {
   return data;
 };
 export const getNewProducts = async () => {
-  const { data } = await http.get(`/products/new`);
+  const { data } = await http.get('/products/new');
   return data;
 };
 
@@ -57,7 +56,7 @@ export const getProductReviews = async (pid) => {
   return data;
 };
 export const addReview = async (payload) => {
-  const { data } = await http.post(`/reviews`, payload);
+  const { data } = await http.post('/reviews', payload);
   return data;
 };
 
@@ -67,11 +66,11 @@ export const getUserInvoice = async (page) => {
 };
 
 export const updateProfile = async ({ ...payload }) => {
-  const { data } = await http.put(`/users/profile`, payload);
+  const { data } = await http.put('/users/profile', payload);
   return data;
 };
 export const changerPassword = async ({ ...payload }) => {
-  const { data } = await http.put(`/users/change-password`, payload);
+  const { data } = await http.put('/users/change-password', payload);
   return data;
 };
 export const forgetPassword = async (payload) => {
@@ -94,7 +93,7 @@ export const updateAddress = async ({ _id, ...payload }) => {
   return data;
 };
 export const createAddress = async ({ ...payload }) => {
-  const { data } = await http.post(`/users/addresses/`, payload);
+  const { data } = await http.post('/users/addresses/', payload);
   return data;
 };
 export const deleteAddress = async ({ _id }) => {
@@ -102,19 +101,19 @@ export const deleteAddress = async ({ _id }) => {
   return data;
 };
 export const search = async (payload) => {
-  const { data } = await http.post(`/search`, payload);
+  const { data } = await http.post('/search', payload);
   return data;
 };
 export const getInvoices = async () => {
-  const { data } = await http.get(`/users/invoice`);
+  const { data } = await http.get('/users/invoice');
   return data;
 };
 export const placeOrder = async (payload) => {
-  const { data } = await http.post(`/orders`, payload);
+  const { data } = await http.post('/orders', payload);
   return data;
 };
 export const getLayout = async () => {
-  const { data } = await http.get(`/layout`);
+  const { data } = await http.get('/layout');
   return data;
 };
 export const singleDeleteFile = async (id) => {
@@ -123,52 +122,51 @@ export const singleDeleteFile = async (id) => {
 };
 
 export const sendNewsletter = async (payload) => {
-  const { data } = await http.post(`/newsletter`, payload);
+  const { data } = await http.post('/newsletter', payload);
   return data;
 };
 
 export const getWishlist = async () => {
-  const { data } = await http.get(`/wishlist`);
+  const { data } = await http.get('/wishlist');
   return data;
 };
 export const updateWishlist = async (pid) => {
-  const { data } = await http.post(`/wishlist`, { pid });
+  const { data } = await http.post('/wishlist', { pid });
   return data;
 };
 
 export const getSliders = async () => {
-  const { data } = await http.get(`/sliders/primary`);
+  const { data } = await http.get('/sliders/primary');
   return data;
 };
 
 export const getProfile = async () => {
-  const { data } = await http.get(`/users/profile`);
+  const { data } = await http.get('/users/profile');
   return data;
 };
 
 export const verifyOTP = async (payload) => {
-  const { data } = await http.post(`/auth/verify-otp`, payload);
+  const { data } = await http.post('/auth/verify-otp', payload);
   return data;
 };
 export const resendOTP = async (payload) => {
-  const { data } = await http.post(`/auth/resend-otp`, payload);
+  const { data } = await http.post('/auth/resend-otp', payload);
   return data;
 };
 
 export const getHeaderData = async () => {
-  const { data } = await http.get(`/header`);
+  const { data } = await http.get('/header');
   return data;
 };
 export const getCart = async (ids) => {
-  const { data } = await http.post(`/cart`, {
+  const { data } = await http.post('/cart', {
     products: ids
   });
   return data;
 };
 // admin
 export const dashboardAnalytics = async () => {
-  
-  const { data } = await http.get(`/admin/dashboard-analytics`);
+  const { data } = await http.get('/admin/dashboard-analytics');
   return data;
 };
 export const getNotification = async (page) => {
@@ -186,12 +184,12 @@ export const getBrandByAdmin = async (id) => {
   return data;
 };
 export const getAllBrands = async () => {
-  const { data } = await http.get(`/admin/all-brands`);
+  const { data } = await http.get('/admin/all-brands');
   return data;
 };
 
 export const addBrand = async (payload) => {
-  const { data } = await http.post(`/admin/brands`, payload);
+  const { data } = await http.post('/admin/brands', payload);
   return data;
 };
 export const updateBrand = async ({ currentSlug, ...payload }) => {
@@ -217,33 +215,31 @@ export const deleteCategory = async (slug) => {
   return data;
 };
 export const addCategory = async (payload) => {
-  
-  const { data } = await http.post(`/admin/categories`, payload);
+  const { data } = await http.post('/admin/categories', payload);
   return data;
 };
 export const updateCategory = async ({ currentSlug, ...payload }) => {
-  console.log("wpayload");
   const { data } = await http.put(`/admin/categories/${currentSlug}`, payload);
   return data;
 };
 export const getAllCategories = async () => {
-  const { data } = await http.get(`/all-categories`);
+  const { data } = await http.get('/all-categories');
   return data;
 };
 export const homeCategroies = async () => {
-  const { data } = await http.get(`/home/categories`);
+  const { data } = await http.get('/home/categories');
   return data;
 };
 export const getBestSellingProducts = async () => {
-  const { data } = await http.get(`/home/products/best-selling`);
+  const { data } = await http.get('/home/products/best-selling');
   return data;
 };
 export const getTopRatedProducts = async () => {
-  const { data } = await http.get(`/home/products/top`);
+  const { data } = await http.get('/home/products/top');
   return data;
 };
 export const getHomeBrands = async () => {
-  const { data } = await http.get(`/home/brands`);
+  const { data } = await http.get('/home/brands');
   return data;
 };
 
@@ -261,7 +257,7 @@ export const deleteSubCategory = async (slug) => {
   return data;
 };
 export const addSubCategory = async (payload) => {
-  const { data } = await http.post(`/admin/subcategories`, payload);
+  const { data } = await http.post('/admin/subcategories', payload);
   return data;
 };
 export const updateSubCategory = async ({ currentSlug, ...payload }) => {
@@ -278,7 +274,7 @@ export const deleteProduct = async (slug) => {
   return response;
 };
 export const newProduct = async (payload) => {
-  const { data: response } = await http.post(`/admin/products`, payload);
+  const { data: response } = await http.post('/admin/products', payload);
   return response;
 };
 export const updateProduct = async ({ currentSlug, ...payload }) => {
@@ -339,7 +335,7 @@ export const getCouponCodes = async (page, search) => {
   return response;
 };
 export const addCouponCode = async (payload) => {
-  const { data: response } = await http.post(`/admin/coupon-codes`, payload);
+  const { data: response } = await http.post('/admin/coupon-codes', payload);
   return response;
 };
 
@@ -365,7 +361,7 @@ export const getNewsletter = async (page) => {
 };
 
 export const paymentIntents = async (amount) => {
-  const { data } = await http.post(`/payment-intents`, {
+  const { data } = await http.post('/payment-intents', {
     amount
   });
   return data;

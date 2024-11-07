@@ -217,7 +217,7 @@ export default function Index() {
                   mb={2}
                   display={{ md: 'block', xs: 'none' }}
                 >
-                 Shop a latest collection of women's fashion <br />
+                 Shop a latest collection of women fashion <br />
                  and winter collection
                 </Typography>
                 <Box>

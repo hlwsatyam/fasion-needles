@@ -17,7 +17,7 @@ export default function Guest({ children }) {
   useEffect(() => {
     if (!isAuthenticated || user?.role === 'user') {
       setAdmin(false);
-      toast.error("You're not allowed to access dashboard");
+      toast.error('You re not allowed to access dashboard');
       router.push('/');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

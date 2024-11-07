@@ -12,14 +12,14 @@ import ProductDetailsCarousel from 'src/components/carousels/details';
 import ProductDetailsSumary from 'src/components/_main/product/summary';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 export async function generateStaticParams() {
-  const { data } = await fetch(process.env.BASE_URL + '/api/products-slugs').then((res) => res.json());
+  const { data } = await fetch('http://localhost:3000' + '/api/products-slugs').then((res) => res.json());
   return data?.map((product) => ({
     slug: product.slug
   }));
 }
 
 export async function generateMetadata({ params }) {
-  const { data: response } = await fetch(process.env.BASE_URL + '/api/products/' + params.slug).then((res) =>
+  const { data: response } = await fetch('http://localhost:3000' + '/api/products/' + params.slug).then((res) =>
     res.json()
   );
  
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProductDetail({ params: { slug } }) {
-  const response = await fetch(process.env.BASE_URL + '/api/products/' + slug).then((res) => res.json());
+  const response = await fetch('http://localhost:3000' + '/api/products/' + slug).then((res) => res.json());
   if (!response) {
     notFound();
   }

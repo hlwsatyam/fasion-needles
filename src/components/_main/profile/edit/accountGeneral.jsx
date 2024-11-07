@@ -131,7 +131,7 @@ export default function AccountGeneral() {
         }
       };
       await axios
-        .post(`https://api.cloudinary.com/v1_1/docjvlprh/image/upload`, formData, config)
+        .post('https://api.cloudinary.com/v1_1/docjvlprh/image/upload', formData, config)
         .then(({ data }) => {
           setFieldValue('cover', {
             _id: data.public_id,
@@ -148,7 +148,7 @@ export default function AccountGeneral() {
   React.useEffect(() => {
     if (!pathname.includes('dashboard') && adminUser?.role.includes('admin')) {
       router.push('/dashboard/settings');
-      toast("Admin can't access this page.", {
+      toast('Admin cant access this page.', {
         duration: 6000
       });
     }
@@ -161,7 +161,7 @@ export default function AccountGeneral() {
     onSuccess: async () => {
       toast.success('OTP resent');
       setVerifyLoading(false);
-      router.push(`/auth/verify-otp`);
+      router.push('/auth/verify-otp');
     },
     onError: () => {
       toast.error('Invalid OTP.');

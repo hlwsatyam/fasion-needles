@@ -10,7 +10,7 @@ const RootStyled = styled(Box)(({ theme }) => ({
     color: theme.palette.common.white,
     zIndex: 0,
     '&:before': {
-      content: "''",
+      content: '',
       position: 'absolute',
       top: '-20%',
       left: '40%',
@@ -22,7 +22,7 @@ const RootStyled = styled(Box)(({ theme }) => ({
       zIndex: 2
     },
     '&:after': {
-      content: "''",
+      content: '',
       position: 'absolute',
       top: '50%',
       transform: 'translateY(-50%)',
@@ -37,7 +37,7 @@ const RootStyled = styled(Box)(({ theme }) => ({
       position: 'relative',
       zIndex: 2,
       '&:before': {
-        content: "''",
+        content: '',
         position: 'absolute',
         bottom: '-20%',
         left: '50%',

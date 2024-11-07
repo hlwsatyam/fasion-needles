@@ -8,7 +8,8 @@ export const data = [
   {
     cover: slide1,
     heading: 'Trendy Summer Dresses for Girls',
-    description: 'Discover our collection of stylish summer dresses that combine comfort and fashion, perfect for any occasion.',
+    description:
+      'Discover our collection of stylish summer dresses that combine comfort and fashion, perfect for any occasion.',
     color: '#FF6F61', // Coral color
     btnPrimary: {
       btnText: 'Shop Summer Styles',

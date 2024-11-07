@@ -7,9 +7,7 @@ import { Fab, Typography, Card, Grid, Box } from '@mui/material';
 import { createGradient } from 'src/theme/palette';
 
 // icons
-import { MdOutlineLocalShipping } from 'react-icons/md';
-import { MdOutlineSupportAgent } from 'react-icons/md';
-import { MdLoop } from 'react-icons/md';
+import { MdOutlineLocalShipping, MdOutlineSupportAgent, MdLoop } from 'react-icons/md';
 import { BiDollar } from 'react-icons/bi';
 
 export default function WhyUs() {
@@ -30,7 +28,7 @@ export default function WhyUs() {
       title: 'Return',
       icon: <MdLoop size={24} />,
       description:
-        "Hassle-free returns within a specified period. If you're not satisfied with your purchase, we make the return process simple and convenient for you."
+        'Hassle-free returns within a specified period. If you re not satisfied with your purchase, we make the return process simple and convenient for you.'
     },
     {
       title: 'Payment',
@@ -39,6 +37,7 @@ export default function WhyUs() {
         'Secure and convenient payment options for a seamless shopping experience. Choose from various payment methods to complete your order.'
     }
   ];
+
   return (
     <Box
       sx={{
@@ -51,8 +50,8 @@ export default function WhyUs() {
       }}
     >
       <Grid container spacing={3} justifyContent="center">
-        {data.map((v) => (
-          <Grid item lg={3} md={4} xs={6} key={Math.random()}>
+        {data.map((v, index) => (
+          <Grid item lg={3} md={4} xs={6} key={index}>
             <Card
               className="card"
               sx={{
@@ -65,7 +64,7 @@ export default function WhyUs() {
                 background: (theme) => createGradient(theme.palette.primary.main, theme.palette.primary.dark),
                 overflow: 'hidden',
                 '&:before': {
-                  content: "''",
+                  content: '""',
                   position: 'absolute',
                   top: 60,
                   left: '-23%',
@@ -76,7 +75,7 @@ export default function WhyUs() {
                   zIndex: 0
                 },
                 '&:after': {
-                  content: "''",
+                  content: '""',
                   position: 'absolute',
                   bottom: -20,
                   right: '-23%',

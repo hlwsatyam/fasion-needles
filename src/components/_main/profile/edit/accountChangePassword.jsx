@@ -67,7 +67,7 @@ export default function AccountChangePassword() {
   React.useEffect(() => {
     if (!pathname.includes('dashboard') && user?.role.includes('admin')) {
       router.push('/dashboard/settings/change-password');
-      toast("Admin can't access this page.", {
+      toast('Admin cant access this page.', {
         duration: 6000
       });
     }

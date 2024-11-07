@@ -9,25 +9,28 @@ const TrackOrder = () => {
   const [orderID, setOrderID] = useState("");
   const [orderFound, setOrderFound] = useState(null);
   const [openToast, setOpenToast] = useState(false);
-const [message,setMessage]=useState("")
+  const [message, setMessage] = useState("");
   const handleTrackOrder = async (e) => {
     e.preventDefault();
 
     if (orderID) {
       try {
         const res = await axios.get(`http://localhost:3000/api/getPackageInfo?ref_ids=${orderID}`);
-       
 
-        if (res.status===200  ) {
-        
-          setMessage("Status: "+ res.data?.data?.ShipmentData[0]?.Shipment?.Status?.Status +"  Product Location: " +res.data?.data?.ShipmentData[0]?.Shipment?.Status?.StatusLocation )
+        if (res.status === 200) {
+          setMessage(
+            "Status: " +
+              res.data?.data?.ShipmentData[0]?.Shipment?.Status?.Status +
+              "  Product Location: " +
+              res.data?.data?.ShipmentData[0]?.Shipment?.Status?.StatusLocation
+          );
           setOrderFound(true);
         } else {
-          setMessage("Order not found")
+          setMessage("Order not found");
           setOrderFound(false);
         }
       } catch (error) {
-        setMessage("Order not found")
+        setMessage("Order not found");
         setOrderFound(false);
       }
 
@@ -45,7 +48,7 @@ const [message,setMessage]=useState("")
         padding: "2rem",
         textAlign: "center",
         backgroundColor: "#f4f4f4",
-        animation: "fadeIn 2s",
+        animation: "fadeIn 2s"
       }}
     >
       <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
@@ -65,7 +68,7 @@ const [message,setMessage]=useState("")
             p: 4,
             backgroundColor: "white",
             borderRadius: 2,
-            boxShadow: 3,
+            boxShadow: 3
           }}
         >
           <TextField
@@ -76,7 +79,7 @@ const [message,setMessage]=useState("")
             onChange={(e) => setOrderID(e.target.value)}
             sx={{ mb: 3 }}
             InputProps={{
-              startAdornment: <LocalShippingIcon sx={{ mr: 1 }} />,
+              startAdornment: <LocalShippingIcon sx={{ mr: 1 }} />
             }}
           />
           <Button
@@ -100,10 +103,12 @@ const [message,setMessage]=useState("")
           sx={{
             width: '100%',
             backgroundColor: orderFound ? "green" : "red",
-            color: "white",
+            color: "white"
           }}
         >
-          {orderFound ? "Order found! We’re preparing it for delivery." : "Order not found. Please check your Order ID."}
+          {orderFound
+            ? "Order found! We’re preparing it for delivery."
+            : "Order not found. Please check your Order ID."}
         </Alert>
       </Snackbar>
     </Box>

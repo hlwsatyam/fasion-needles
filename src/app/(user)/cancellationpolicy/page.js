@@ -108,8 +108,8 @@ const CancellationPolicy = () => {
         </ListItem>
         <ListItem>
           <Typography>
-            <strong>Partial Refunds:</strong> In some cases, partial refunds may be granted for items that are
-            returned in a used or damaged state. Such cases are evaluated individually.
+            <strong>Partial Refunds:</strong> In some cases, partial refunds may be granted for items that are returned
+            in a used or damaged state. Such cases are evaluated individually.
           </Typography>
         </ListItem>
       </List>

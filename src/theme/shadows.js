@@ -44,7 +44,7 @@ const createCustomShadow = (color) => {
   const transparent = alpha(color, 0.24);
 
   return {
-    z1: `0 3px 6px rgb(48 51 128 / 10%)`,
+    z1: '0 3px 6px rgb(48 51 128 / 10%)',
     z8: `0 8px 16px 0 ${transparent}`,
     z12: `0 0 2px 0 ${transparent}, 0 12px 24px 0 ${transparent}`,
     z16: `0 0 2px 0 ${transparent}, 0 16px 32px -4px ${transparent}`,
@@ -58,6 +58,7 @@ const createCustomShadow = (color) => {
     error: ` 0px 8px 16px ${alpha(palette.light.error.main, 0.24)}`
   };
 };
+
 // type error
 export const customShadows = {
   light: createCustomShadow(LIGHT_MODE),

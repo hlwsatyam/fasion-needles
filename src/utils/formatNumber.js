@@ -5,10 +5,9 @@ import numeral from 'numeral';
 
 const locale = 'en-US';
 export function fCurrency(number) {
-   
   const currency = new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency:  process.env.CURRENCY || 'USD'
+    currency: process.env.CURRENCY || 'USD'
   });
 
   return currency.format(number).slice(0, -1);

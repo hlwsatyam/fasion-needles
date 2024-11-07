@@ -18,16 +18,14 @@ function PaymentFailed() {
         boxShadow="0 4px 12px rgba(0, 0, 0, 0.1)"
       >
         <ErrorOutlineIcon sx={{ fontSize: 80, color: '#e57373' }} />
-        
+
         <Typography variant="h4" sx={{ mt: 2, color: '#d32f2f' }}>
           Payment Failed
         </Typography>
-        
-        <Typography variant="body1" sx={{ mt: 1, color: '#757575' }}>
-          Unfortunately, we couldn't process your payment.
-        </Typography>
 
-      
+        <Typography variant="body1" sx={{ mt: 1, color: '#757575' }}>
+          Unfortunately, we could not process your payment.
+        </Typography>
       </Box>
     </Container>
   );

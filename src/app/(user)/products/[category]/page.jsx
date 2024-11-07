@@ -8,14 +8,14 @@ import Filter from 'src/components/_main/products/filters';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 import ProductList from 'src/components/_main/products';
 export async function generateStaticParams() {
-  const { data } = await fetch(process.env.BASE_URL + '/api/categories-slugs').then((res) => res.json());
+  const { data } = await fetch('http://localhost:3000'  + '/api/categories-slugs').then((res) => res.json());
   return data?.map((cat) => ({
     category: cat.slug
   }));
 }
 
 export async function generateMetadata({ params }) {
-  const { data: response } = await fetch(process.env.BASE_URL + '/api/categories/' + params.category).then((res) =>
+  const { data: response } = await fetch('http://localhost:3000'  + '/api/categories/' + params.category).then((res) =>
     res.json()
   );
   // const images = category.images.map((img) => img.url);
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Listing({ params }) {
   const { category } = params;
-  const response = await fetch(process.env.BASE_URL + '/api/category-title/' + category).then((res) => res.json());
+  const response = await fetch('http://localhost:3000'  + '/api/category-title/' + category).then((res) => res.json());
   if (!response) {
     notFound();
   }

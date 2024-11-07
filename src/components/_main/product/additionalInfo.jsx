@@ -26,7 +26,7 @@ export default function AdditionalInfo() {
                 backgroundColor: theme.palette.primary.light
               },
               '&:before': {
-                content: "''",
+                content: '',
                 position: 'absolute',
                 top: '40%',
                 transform: 'translateY(-50%)',
@@ -38,7 +38,7 @@ export default function AdditionalInfo() {
                 zIndex: 0
               },
               '&:after': {
-                content: "''",
+                content: '',
                 position: 'absolute',
                 right: '5%',
                 transform: 'translateY(-50%)',

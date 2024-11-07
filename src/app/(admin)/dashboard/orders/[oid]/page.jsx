@@ -8,11 +8,9 @@ import Toolbar from 'src/components/_admin/toolbar';
 import HeaderBreadcrumbs from 'src/components/headerBreadcrumbs';
 import OrderToolbarActions from 'src/components/_admin/orders/orderToolbarActions';
 import * as api from 'src/services';
-// usequery
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
 import PropTypes from 'prop-types';
- 
 import TrackDelevery from 'src/components/track-order/TrackDelevery';
 
 Page.propTypes = {

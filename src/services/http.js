@@ -20,10 +20,10 @@ function getToken() {
   return '';
 }
 
-const baseURL = "http://localhost:3000";
+const baseURL = 'http://localhost:3000';
 // const baseURL = process.env.BASE_URL;
 const http = axios.create({
-  baseURL: baseURL + `/api`,
+  baseURL: baseURL + '/api',
   timeout: 25000
 });
 

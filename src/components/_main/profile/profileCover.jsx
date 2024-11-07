@@ -15,7 +15,7 @@ const RootStyle = styled(Card)(({ theme }) => ({
   borderBottomWidth: 1,
   backgroundColor: theme.palette.primary.main,
   '&:before': {
-    content: "''",
+    content: '',
     position: 'absolute',
     top: '-23%',
     left: '20%',
@@ -27,7 +27,7 @@ const RootStyle = styled(Card)(({ theme }) => ({
     zIndex: 0
   },
   '&:after': {
-    content: "''",
+    content: '',
     position: 'absolute',
     top: '50%',
     transform: 'translateY(-50%)',
@@ -39,7 +39,7 @@ const RootStyle = styled(Card)(({ theme }) => ({
     zIndex: 0
   },
   '& > div:before': {
-    content: "''",
+    content: '',
     position: 'absolute',
     bottom: '-30%',
     left: '50%',
